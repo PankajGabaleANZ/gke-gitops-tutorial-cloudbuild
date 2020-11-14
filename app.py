@@ -20,6 +20,14 @@ app = Flask('hello-cloudbuild')
 def hello():
   return "The Pipeline Run Completed\n"
 
+@app.route('/start_preprocessing')
+def startPreprocessing():
+  return "The pipeline preprocessing started"
+
+@app.route('/start_machine_learning')
+def startMachineLearning():
+  return "The pipeline preprocessing started"
+
 if __name__ == '__main__':
   app.run(host = '0.0.0.0', port = 8080)
 # [END hello-app]
